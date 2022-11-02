@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/header.scss';
+import '../../styles/header.scss';
 
 const Header = ({ USDRate, EURRate, fromSelect, toSelect }) => (
   <header className="header">

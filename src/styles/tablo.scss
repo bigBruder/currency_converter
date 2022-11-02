@@ -1,13 +1,17 @@
 .currency {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 500px;
-  height: 200px;
+  width: 600px;
+  height: 60px;
   margin: auto;
   background-color: rgb(201, 163, 94);
   border-radius: 30px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+
+  &__btn {
+    border: none;
+    background-color: rgb(201, 163, 94);
+  }
 
   &-tablo {
     display: flex;
@@ -27,4 +31,9 @@
       border-radius: 10px;
     }
   }
+}
+
+.fa-solid {
+  font-size: 20px;
+  color: aliceblue;
 }
