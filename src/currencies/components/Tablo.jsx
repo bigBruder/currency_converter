@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/tablo.scss';
 
 const Tablo = ({
+  setReverseSelect,
   fromInputValue,
   toInputValue,
   fromInputChange,
@@ -12,13 +13,13 @@ const Tablo = ({
   toSelect,
   rates,
 }) => {
-  let style = { flexDirection: 'row' };
-  const reverse = () => {
-    if (style === { flexDirection: 'row' }) {
-      return (style = { flexDirection: 'rowReverse' });
-    }
-    return (style = { flexDirection: 'row' });
-  };
+  // let style = { flexDirection: 'row' };
+  // const reverse = () => {
+  //   if (style === { flexDirection: 'row' }) {
+  //     return (style = { flexDirection: 'rowReverse' });
+  //   }
+  //   return (style = { flexDirection: 'row' });
+  // };
   return (
     <div className="currency">
       <div className="currency-tablo">
@@ -37,7 +38,7 @@ const Tablo = ({
           ))}
         </select>
       </div>
-      <button className="currency__btn" onClick={reverse} style={style}>
+      <button className="currency__btn" onClick={setReverseSelect}>
         <i className="fa-solid fa-arrow-right-arrow-left"></i>
       </button>
       <div className="currency-tablo">

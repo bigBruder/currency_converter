@@ -17,6 +17,10 @@ const Main = ({ getCurrenciesList, currenciesList }) => {
   const fromSelectChange = e => setSelect({ ...select, fromSelect: e.target.value });
   const toSelectChange = e => setSelect({ ...select, toSelect: e.target.value });
 
+  const setReverseSelect = () => {
+    setSelect({ fromSelect: select.toSelect, toSelect: select.fromSelect });
+  };
+
   if (!currenciesList.currencies.length) {
     return null;
   }
@@ -47,6 +51,7 @@ const Main = ({ getCurrenciesList, currenciesList }) => {
         toSelect={select.toSelect}
       />
       <Tablo
+        setReverseSelect={setReverseSelect}
         fromSelectChange={fromSelectChange}
         toSelectChange={toSelectChange}
         fromInputChange={fromInputChange}
